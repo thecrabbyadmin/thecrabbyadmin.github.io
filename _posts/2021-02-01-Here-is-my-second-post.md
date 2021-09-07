@@ -1,8 +1,8 @@
 ---
 layout: tag
-title:  "Second Post"
+title:  "Get Date Information"
 date:   2021-02-01 20:48:41 -0600
 categories: jekyll update
 ---
 
-Lets see how this looks.
+A quick easy way to get date information is using the Get-Date PowerShell cmdlet.
