@@ -1,11 +1,38 @@
 language: ruby
+rvm:
+ - 2.7
+
+sudo: false
 cache: bundler
-gemfile: docs/Gemfile
-script:
-  - bundle exec jekyll algolia --source docs --destination docs/_site --config docs/_config.yml
+gemfile: Gemfile
+
 branches:
   only:
-    # Change this to gh-pages if you're deploying using the gh-pages branch
-    - master
-rvm:
- - 2.4
+    - main
+
+notifications:
+  email: false
+
+env:
+  global:
+  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
+
+before_script:
+ - chmod +x ./script/cibuild
+ - chmod +x ./script/sitemap_ping
+
+script: ./script/cibuild
+
+deploy:
+  strategy: git
+  provider: pages
+  target_branch: gh-pages
+  cleanup: false
+  token: $GITHUB_TOKEN
+  committer_from_gh: true
+  keep_history: true
+  verbose: true
+  on:
+    branch: main
+
+after_deploy: ./script/sitemap_ping

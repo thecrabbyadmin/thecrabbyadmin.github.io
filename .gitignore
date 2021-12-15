@@ -27,3 +27,11 @@ codekit-config.json
 .sass-cache
 _asset_bundler_cache
 _site
+codekit-config.json
+example/_site
+Gemfile.lock
+node_modules
+npm-debug.log*
+docs/
+test/
+vendor/bundle

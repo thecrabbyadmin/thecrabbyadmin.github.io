@@ -11,47 +11,37 @@
 # https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
 
 # theme                  : "minimal-mistakes-jekyll"
-remote_theme             : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "dark" #"default", "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+# remote_theme           : "mmistakes/minimal-mistakes"
+minimal_mistakes_skin    : "dark" # "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "The Crabby Admin"
+title                    : "Stuff I Forget"
 title_separator          : "-"
-subtitle                 : # site tagline that appears below site title in masthead
-name                     : "Crabby Admin"
-description              : "An amazing website."
-url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
-teaser                   : "/assets/images/crab2.jpg" # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-logo                     : "/assets/images/CartoonCrab_1.jpg" # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
-masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
+name                     : "The Crabby Admin"
+description              : "Stuff I've learned"
+url                      : # https://powershell.anovelidea.org # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+baseurl                  : / # the subpath of your site, e.g. "/blog"
+repository               : #thedavecarroll/powershell.anovelidea.org # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
+
+# staticman v3
 comments:
-  provider               : # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
-  disqus:
-    shortname            : # https://help.disqus.com/customer/portal/articles/466208-what-s-a-shortname-
-  discourse:
-    server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
-  facebook:
-    # https://developers.facebook.com/docs/plugins/comments
-    appid                :
-    num_posts            : # 5 (default)
-    colorscheme          : # "light" (default), "dark"
-  utterances:
-    theme                : # "github-light" (default), "github-dark"
-    issue_term           : # "pathname" (default)
+  provider               : "staticman_v2"
   staticman:
-    branch               : # "master"
-    endpoint             : # "https://{your Staticman v3 API}/v3/entry/github/"
+    branch               : "main"
+    endpoint             : "https://dev.staticman.net/v3/entry/github/"
+
 reCaptcha:
-  siteKey                :
-  secret                 :
+  siteKey                : "6LfTsmoUAAAAAKI2qS8kGdIxL5rAxjr4vKfD1yH8"
+  secret                 : "TziqEh04wif227oSMbOTngYQ4uVciE2p/nRkXx1jqtuLsCCsJKPWc0WKH1czZAV5xIJ3m/YBZgeoQvSnbUbOCjDOJrGREz/DQ3/i26Gc8cDsi06eciYlVB3JPZFYGazJftccRQoSljibPJe7PTG5r6d+TlVo/XqR7QHEIDWzIhA="
+
+
 atom_feed:
   path                   : # blank (default) uses feed.xml
-search                   : # true, false (default)
+search                   : true # true, false (default)
 search_full_content      : # true, false (default)
 search_provider          : # lunr (default), algolia, google
 algolia:
@@ -70,7 +60,7 @@ naver_site_verification  :
 
 # Social Sharing
 twitter:
-  username               :
+  username               : #thedavecarroll
 facebook:
   username               :
   app_id                 :
@@ -85,19 +75,26 @@ social:
 
 # Analytics
 analytics:
-  provider               : false # false (default), "google", "google-universal", "google-gtag", "custom"
+  provider               : false #was google # false (default), "google", "google-universal", "custom"
   google:
-    tracking_id          :
+    tracking_id          : #UA-122236350-1
     anonymize_ip         : # true, false (default)
 
 
 # Site Author
 author:
-  name             : "Crabby Admin"
-  avatar           : "/assets/images/crab2.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "A crab."
-  location         : "In a sandy hole."
+  name             : "The Crabby Admin"
+  avatar           : /assets/images/crab2.jpg # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  bio              : Server Admin with over 20 years experience, most of which I have forgotten. #
+  location         : A beach near you.
   email            :
+  uri              :
+  home             : # null (default), "absolute or relative url to link to author home"
+  twitter          : #thedavecarroll
+  github           : #thedavecarroll
+  linkedin         : #thedavecarroll
+  stackoverflow    : # "123456/username" (the last part of your profile url, e.g. https://stackoverflow.com/users/123456/username)
+  youtube          : # "https://youtube.com/c/MichaelRoseDesign"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
@@ -123,13 +120,13 @@ footer:
   links:
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
-      # url:
+      url: https://twitter.com/getname24
     - label: "Facebook"
       icon: "fab fa-fw fa-facebook-square"
       # url:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url:
+      # url: https://github.com/thedavecarroll
     - label: "GitLab"
       icon: "fab fa-fw fa-gitlab"
       # url:
@@ -172,6 +169,7 @@ exclude:
   - tmp
   - /docs # ignore Minimal Mistakes /docs
   - /test # ignore Minimal Mistakes /test
+  #- /drafts # ignore my drafts
 keep_files:
   - .git
   - .svn
@@ -209,7 +207,7 @@ sass:
 permalink: /:categories/:title/
 paginate: 5 # amount of posts to show
 paginate_path: /page:num/
-timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: US/Central # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
 # Plugins (previously gems:)
@@ -219,6 +217,7 @@ plugins:
   - jekyll-gist
   - jekyll-feed
   - jekyll-include-cache
+  - jemoji
 
 # mimic GitHub Pages with --safe
 whitelist:
@@ -227,6 +226,7 @@ whitelist:
   - jekyll-gist
   - jekyll-feed
   - jekyll-include-cache
+  - jemoji
 
 
 # Archives
@@ -276,6 +276,15 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
-      comments: # true
-      share: true
-      related: true
+      #comments: # true
+      #share: true
+      #related: true
+  # _pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+
+github: [metadata]
