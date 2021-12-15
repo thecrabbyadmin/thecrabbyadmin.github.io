@@ -1,8 +1,16 @@
 ---
-layout: tag
-title:  "Dont Cut and Paste"
-date:   2021-09-08 19:48:41 -0600
-categories: jekyll update
+layout: single
+title: "Dont Cut and Paste"
+excerpt: "."
+date: 2021-07-08 
+last_modified_at: 2021-09-08 
+tags:
+  - ENB
+  
+category:
+  - blog
+
+
 ---
 
-Its Bad.  Don't Do it..
+Its Bad.  Don't Do it..  But if you did it can probably be fixed.
